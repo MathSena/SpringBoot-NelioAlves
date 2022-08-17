@@ -101,4 +101,15 @@ public class ItemPedido implements Serializable{
 		return Objects.equals(id, other.id);
 	}
 
+	@Override
+	public String toString() {
+		return getProduto().getNome() +
+				", Qte: " +
+				getQuantidade() +
+				", Preço Unitário: " +
+				getPreco() +
+				", Subtotal:  " +
+				getSubTotal() +
+				"\n";
+	}
 }

@@ -1,5 +1,6 @@
 package com.mathsena.cursomc.resources.utils;
 
+import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -7,8 +8,8 @@ import java.util.List;
 
 public class URL {
 
-    public static String decodeParam(String s) {
-        return URLDecoder.decode(s, StandardCharsets.UTF_8);
+    public static String decodeParam(String s) throws UnsupportedEncodingException {
+        return URLDecoder.decode(s, String.valueOf(StandardCharsets.UTF_8));
     }
 
     public static List<Integer> decodeIntList(String s) {
